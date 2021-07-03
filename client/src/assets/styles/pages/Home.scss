@@ -1,0 +1,39 @@
+#home-page {
+   main {
+      padding-top: 91px;
+   }
+   .text-field {
+      margin-bottom: 30px;
+   }
+   h1 {
+      font-size: 39px;
+      margin-bottom: 30px;
+   }
+
+   p {
+      &#home-description {
+         margin-bottom: 70px;
+      }
+      &#do-not-fill {
+         margin-bottom: 55px;
+      }
+   }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   #home-page {
+      main {
+         padding-top: 70px;
+      }
+      p {
+         &#home-description {
+            margin-bottom: 40px;
+         }
+         &#do-not-fill {
+            margin-bottom: 25px;
+         }
+      }
+   }
+   //burger navigace (zatím není potřeba)
+}

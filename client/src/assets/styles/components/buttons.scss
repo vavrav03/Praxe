@@ -1,0 +1,44 @@
+@import "../colours.scss";
+
+.btn {
+   border-radius: 50px;
+   font-weight: 500;
+   border: none;
+   padding-left: 25px;
+   padding-right: 25px;
+   outline: none;
+
+   & span {
+      font-weight: 500;
+   }
+
+   &.primary {
+      background: $primaryGradientBackground;
+      background-repeat: no-repeat;
+      color: $primaryGradientColor;
+      transition: all 0.25s ease;
+      &:hover, &:focus {
+         background-position: -100px;
+      }
+   }
+
+   &.normal {
+      width: 200px;
+      height: 50px;
+   }
+
+   &.stretch {
+      width: initial;
+      height: 50px;
+   }
+
+   &.transparent {
+      background-color: $transparentFully;
+      color: black;
+      border: solid 2px rgba(0,0,0,0);
+      transition: border-color 0.2s ease;
+      &:hover, &:focus{
+         border-color:rgba(0,0,0,1);
+      }
+   }
+}
