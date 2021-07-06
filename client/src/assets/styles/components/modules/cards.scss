@@ -1,0 +1,14 @@
+.card {
+
+   // &.normal {
+      
+   // }
+
+   &.outlined {
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      box-shadow: 3px 3px 15px rgba(168, 168, 168, 0.35);
+      border-radius: 25px;
+      padding: 10px;
+   }
+}

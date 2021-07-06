@@ -1,31 +1,36 @@
-import NavbarLinkList from "components/molecules/NavbarLinkList";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "assets/img/logo.png";
+import { checkVariants } from "utils/ComponentUtils";
 
-function Navbar({ isLoggedIn }) {
+const variants = {
+   normal: "normal",
+};
+
+function Navbar({ variant = variants.normal, isLoggedIn }) {
+   checkVariants(variant, variants);
    //todo isLoggedIn - potreba znat dalsi info
    return (
-      <header className={"navbar"}>
+      <header className={`navbar ${variant}`}>
          <div className={"navbar-brand"}>
             <img src={logo} alt={"logo"}></img>
          </div>
-         <NavbarLinkList>
-            <div className="nav-list-item">
-               <Link className={"nav-link"} to="/">
+         <nav className={`horizontal-list`}>
+            <div className="list-item">
+               <Link className={"nav-link to-underline"} to="/">
                   domů
                </Link>
             </div>
             {isLoggedIn ? null : (
-               <div className="nav-list-item">
-                  <Link className={"nav-link"} to="/login">
-                     <span  style={{ marginRight: "5px" }}>přihlásit se</span>
+               <div className="list-item">
+                  <Link className={"nav-link to-underline"} to="/login">
+                     <span style={{ marginRight: "5px" }}>přihlásit se</span>
                      <i className="fas fa-arrow-right"></i>
                   </Link>
                </div>
             )}{" "}
             {/*možnost doplnění nějaké hlavičky se jménem a profilovkou přihlášeného uživatele*/}
-         </NavbarLinkList>
+         </nav>
       </header>
    );
 }

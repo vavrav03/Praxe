@@ -44,8 +44,8 @@ function Home() {
          rightSideText={"Jiný inspirativní kus textu o pár slovech, aby se registrovali."}
       >
          <div className="limiter-container">
-            <h1>Vítejte, jméno jméno!</h1>
-            <Card>
+            <h1 className={"load-bottom-animation-1"}>Vítejte, jméno jméno!</h1>
+            <Card variant={"outlined"} className={"load-bottom-animation-2"}>
                <Formik
                   initialValues={{
                      channel_name: "",
@@ -57,6 +57,7 @@ function Home() {
                         {({ field, form, meta }) => (
                            <TextField
                               label="Název prodejního kanálu:"
+                              variant={"text"}
                               formControlData={field}
                               error={meta.error}
                               touched={meta.touched}

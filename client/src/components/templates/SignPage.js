@@ -2,9 +2,9 @@ import Footer from "components/organisms/Footer";
 import Navbar from "components/organisms/Navbar";
 import React from "react";
 
-function SignPage({ isLoggedIn, children, id, rightSideText }) {
+function SignPage({ isLoggedIn, id, rightSideText, children }) {
    return (
-      <div id={id} className={"sign-page"}>
+      <div id={id} className={"sign-page load-fade-animation-1"}>
          <div className="left-side">
             <Navbar isLoggedIn={isLoggedIn}></Navbar>
             <main >{children}</main>

@@ -1,0 +1,17 @@
+.navbar {
+   padding: 20px 40px 0px 40px;
+   display: flex;
+   box-sizing: border-box;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   max-height: 85px;
+   //position: fixed / sticky...
+
+   .horizontal-list {
+      @include underline-items-animation;
+      .nav-link {
+         position: relative;
+      }
+   }
+}

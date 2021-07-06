@@ -1,17 +1,16 @@
 import React from "react";
+import { checkVariants } from "utils";
 
-const variants = ["primary", "secondary", "transparent"];
-const sizes = ["normal", "stretch"];
+const variants = Object.freeze({
+   primary: "primary",
+   secondary: "secondary",
+   transparent: "transparent",
+});
 
-function Button({ variant, size, type, onClick, children }) {
-   if(!variants.includes(variant)){
-      variant = variants[0];
-   }
-   if(!sizes.includes(size)){
-      size = sizes[0];
-   }
+function Button({ variant = variants.primary, type, onClick, children, className }) {
+   checkVariants(variant, variants);
    return (
-      <button type={type} className={`btn ${variant} ${size}`} onClick={onClick}>
+      <button type={type} className={`btn ${variant} ${className}`} onClick={onClick}>
          {children}
       </button>
    );

@@ -1,0 +1,10 @@
+.horizontal-list {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   margin: 0 -10px;
+   .list-item {
+      padding: 0 10px;
+   }
+}

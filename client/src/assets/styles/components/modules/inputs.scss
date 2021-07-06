@@ -1,0 +1,53 @@
+.text-field {
+   width: 100%;
+
+   .label {
+      font-weight: 500;
+      margin-bottom: 7px;
+   }
+
+   .input-wrapper {
+      border-radius: 50px;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 100%;
+      height: 50px;
+      background-color: $grey-100;
+      border: solid 2px rgba(0, 0, 0, 0);
+      transition: border-color 0.15s;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      &:focus-within {
+         border-color: rgba(0, 0, 0, 1);
+      }
+
+      input {
+         width: 100%;
+         height: 100%;
+         border: none;
+         outline: none;
+         background-color: $black-transparent;
+         &::placeholder {
+            color: rgba(0, 0, 0, 0.3);
+         }
+      }
+   }
+
+   .error-message-wrapper {
+      color: $red-200;
+      display: none;
+   }
+   &.error {
+      .input-wrapper {
+         border-color: $red-200;
+      }
+      .error-message-wrapper {
+         display: initial;
+      }
+   }
+
+   &.checked .icon {
+      color: $green-100;
+   }
+}

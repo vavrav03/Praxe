@@ -1,7 +1,13 @@
 import React from "react";
+import { checkVariants } from "utils/ComponentUtils";
 
-function Footer() {
-   return <footer className={"footer"}>© 2021 prodey.cz</footer>;
+const variants = {
+   concise: "concise",
+};
+
+function Footer({ variant = variants.concise }) {
+   checkVariants(variant, variants);
+   return <footer className={`${variant}`}>© 2021 prodey.cz</footer>;
 }
 
 export default Footer;

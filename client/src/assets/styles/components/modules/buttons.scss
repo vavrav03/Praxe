@@ -1,5 +1,3 @@
-@import "../colours.scss";
-
 .btn {
    border-radius: 50px;
    font-weight: 500;
@@ -7,38 +5,35 @@
    padding-left: 25px;
    padding-right: 25px;
    outline: none;
+   height: 50px;
 
    & span {
       font-weight: 500;
    }
 
    &.primary {
-      background: $primaryGradientBackground;
+      width: 200px;
+      background: $primary-gradient-background;
       background-repeat: no-repeat;
-      color: $primaryGradientColor;
+      color: white;
       transition: all 0.25s ease;
-      &:hover, &:focus {
+      &:hover, &:active {
          background-position: -100px;
       }
    }
 
-   &.normal {
-      width: 200px;
-      height: 50px;
-   }
-
-   &.stretch {
-      width: initial;
-      height: 50px;
-   }
-
    &.transparent {
-      background-color: $transparentFully;
+      width: initial;
+      background-color: $black-transparent;
       color: black;
-      border: solid 2px rgba(0,0,0,0);
+      border: solid 2px $black-transparent;
       transition: border-color 0.2s ease;
       &:hover, &:focus{
-         border-color:rgba(0,0,0,1);
+         border-color: black;
       }
    }
+}
+
+.icon-btn {
+   cursor: pointer;
 }

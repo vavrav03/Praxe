@@ -1,0 +1,18 @@
+* {
+   // color: inherit;
+   background-color: inherit;
+   box-sizing: border-box;
+   color: black;
+}
+
+body,
+html,
+#root {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+.hidden {
+   display: none;
+}

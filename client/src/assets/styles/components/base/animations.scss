@@ -1,0 +1,15 @@
+.load-bottom-animation-1 {
+   @include load-bottom-animation(0ms);
+}
+
+.load-bottom-animation-2 {
+   @include load-bottom-animation(200ms);
+}
+
+.load-bottom-animation-3 {
+   @include load-bottom-animation(300ms);
+}
+
+.load-fade-animation-1 {
+   @include load-fade-animation(0ms);
+}

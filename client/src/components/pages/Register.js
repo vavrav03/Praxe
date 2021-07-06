@@ -34,7 +34,6 @@ function Register() {
             resolve(response.data);
          }, 200);
       });
-      console.log(response);
       const exists = response === 1;
       if (exists) {
          return `Email ${value} je zaregistrován`;
@@ -72,8 +71,8 @@ function Register() {
          rightSideText={"Inspirativní kus textu o pár slovech, aby se registrovali."}
       >
          <div className="limiter-container">
-            <h1>Registrace</h1>
-            <Card>
+            <h1 className="load-bottom-animation-1">Registrace</h1>
+            <Card variant={"outlined"} className={"load-bottom-animation-2"}>
                <Formik
                   initialValues={{
                      name: "",
@@ -87,6 +86,7 @@ function Register() {
                         {({ field, form, meta }) => (
                            <TextField
                               label="Jméno a příjmení:"
+                              variant={"text"}
                               formControlData={field}
                               error={meta.error}
                               touched={meta.touched}
@@ -98,7 +98,7 @@ function Register() {
                         {({ field, form, meta }) => (
                            <TextField
                               label="Email:"
-                              type={"email"}
+                              variant={"email"}
                               formControlData={field}
                               error={meta.error}
                               touched={meta.touched}
@@ -109,7 +109,7 @@ function Register() {
                      <FastField name="password" validate={validatePassword}>
                         {({ field, form, meta }) => (
                            <TextField
-                              type={"password"}
+                              variant={"password"}
                               label="Heslo:"
                               formControlData={field}
                               error={meta.error}
@@ -132,6 +132,7 @@ function Register() {
                onClick={() => {
                   history.push(routes.login.path);
                }}
+               className={"load-bottom-animation-2"}
             >
                <span style={{ marginRight: "5px" }}>Již máte účet? Přihlaste se </span>
                <i className="fas fa-arrow-right"></i>
